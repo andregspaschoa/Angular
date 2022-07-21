@@ -1,36 +1,12 @@
-
-<style>
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  
-  
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
-
-   
-  }
-
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
-</style>
-
+<div class="container-fluid">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          {{ title }}
+        </a>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>  
+</div>
