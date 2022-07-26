@@ -14,7 +14,7 @@
         minlength="5" 
         required> 
       <div *ngIf="nome.errors && (nome.dirty || nome.touched)"
-      class="alert alert-danger">
+           class="alert alert-danger">
         <div [hidden]="!nome.errors.required">
           Digite a tarefa.
         </div>
@@ -30,7 +30,7 @@
         (click)="cadastrar()"
         value="Cadastrar"
         [disabled]="!formTarefa.form.valid">
-      <a [routerLink]="['./tarefas']"
+      <a [routerLink]="['/tarefas']"
         class="btn btn-default">
         <span class="glyphicon glyphicon-chevron-left" 
           aria-hidden="true"></span> Voltar
