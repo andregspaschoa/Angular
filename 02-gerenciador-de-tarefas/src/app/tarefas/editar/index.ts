@@ -1,1 +1,1 @@
-export * from "./editar-tarefa.component";
+export * from './editar-tarefa.component';
