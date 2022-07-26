@@ -13,8 +13,8 @@
         #nome="ngModel"
         minlength="5" 
         required> 
-      <div *ngIf="nome.errors && (nome.dirty|| nome.touched)"
-      class="alert alert-danger">
+      <div *ngIf="nome.errors && (nome.dirty || nome.touched)"
+           class="alert alert-danger">
         <div [hidden]="!nome.errors.required">
           Digite a tarefa.
         </div>
@@ -28,7 +28,7 @@
         type="submit"
         class="btn btn-success"
         (click)="atualizar()"
-        value="Atualizar">
+        value="Atualizar"
         [disabled]="!formTarefa.form.valid">
       <a [routerLink]="['/tarefas']"
         class="btn btn-default">
