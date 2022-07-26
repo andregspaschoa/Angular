@@ -2,23 +2,21 @@ import { Injectable } from '@angular/core';
 
 import { Tarefa } from './';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TarefaService {
 
   constructor() { }
 
   listarTodos(): Tarefa[] {
-    const tarefas = localStorage['tarefas'];
-    return tarefas ? JSON.parse(tarefas) : [];   //utilizado o if else em forma de operador ternario
+  	const tarefas = localStorage['tarefas'];
+  	return tarefas ? JSON.parse(tarefas) : [];
   }
 
   cadastrar(tarefa: Tarefa): void {
-    const tarefas = this.listarTodos();
-    tarefa.id = new Date().getTime();
-    tarefas.push(tarefa);
-    localStorage['tarefas'] = JSON.stringify(tarefas);
+  	const tarefas = this.listarTodos();
+  	tarefa.id = new Date().getTime();
+  	tarefas.push(tarefa);
+  	localStorage['tarefas'] = JSON.stringify(tarefas);
   }
 
   buscarPorId(id: number): Tarefa {
@@ -28,7 +26,7 @@ export class TarefaService {
 
   atualizar(tarefa: Tarefa): void {
     const tarefas: Tarefa[] = this.listarTodos();
-    tarefas.forEach((obj, index, objs)=> {
+    tarefas.forEach((obj, index, objs) => { 
       if (tarefa.id === obj.id) {
         objs[index] = tarefa;
       }
@@ -43,16 +41,13 @@ export class TarefaService {
   }
 
   alterarStatus(id: number): void {
-    const tarefas: Tarefa[] = this.listarTodos ();
-    tarefas.forEach((obj, index, objs) => {
+    const tarefas: Tarefa[] = this.listarTodos();
+    tarefas.forEach((obj, index, objs) => { 
       if (id === obj.id) {
         objs[index].concluida = !obj.concluida;
       }
     });
     localStorage['tarefas'] = JSON.stringify(tarefas);
   }
-
-
-  
 
 }
