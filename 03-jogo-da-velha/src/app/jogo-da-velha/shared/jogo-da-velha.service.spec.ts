@@ -1,16 +1,14 @@
-import { TestBed } from '@angular/core/testing';
-
+import { TestBed, inject } from '@angular/core/testing';
 import { JogoDaVelhaService } from './jogo-da-velha.service';
 
 describe('JogoDaVelhaService', () => {
-  let service: JogoDaVelhaService;
-
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(JogoDaVelhaService);
+    TestBed.configureTestingModule({
+      providers: [JogoDaVelhaService]
+    });
   });
 
-  it('should be created', () => {
+  it('should ...', inject([JogoDaVelhaService], (service: JogoDaVelhaService) => {
     expect(service).toBeTruthy();
-  });
+  }));
 });
