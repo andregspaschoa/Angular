@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '04 Conversor de moedas';
+  title = '04- Conversor de moedas';
 }
