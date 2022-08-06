@@ -27,8 +27,8 @@ export class ConversorService {
   	let params = `&base=${conversao.moedaDe}&symbols=${conversao.moedaPara}`;
   	return this.http
       .get(this.BASE_URL + params);
-      //.map(response => response.json() as ConversaoResponse)
-      //.catch(error => Observable.throw(error));
+    //.map(response => response.json() as ConversaoResponse)
+    //.catch(error => Observable.throw(error));
   }
 
   /**
