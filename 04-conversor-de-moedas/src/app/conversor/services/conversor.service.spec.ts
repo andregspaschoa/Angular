@@ -1,16 +1,21 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ConversorService } from './conversor.service';
 
 describe('ConversorService', () => {
-  let service: ConversorService;
-
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ConversorService);
+    TestBed.configureTestingModule({
+      providers: [
+      	ConversorService
+      ],
+      imports: [
+      	HttpClientModule
+      ]
+    });
   });
 
-  it('should be created', () => {
+  it('should ...', inject([ConversorService], (service: ConversorService) => {
     expect(service).toBeTruthy();
-  });
+  }));
 });
