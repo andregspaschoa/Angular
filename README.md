@@ -96,3 +96,15 @@
         Para a utilização deve-se configurar o app-routing.module, e adicionar o import no componente principal da aplicação
         Sendo assim, ao utilizar as Rotas no angular devemos utilizar a tag <router-outlet></router-outlet>
         E declarar o path dessas rotas dentro do app-routing.module.
+
+    LocalStorage
+
+        O localStorage serve para armazenar dados no navegador, ele pode ser utilizado para armazenar dados como, uma tarefa criada dentro de um site, uma listagem de acessados ou favoritos, dentre outros dados.
+        é possivel chama-lo da seguinte forma:
+        const nomeDaVariavel = localStorage['nomeDaVariavel'];
+        Lembrando que o limite é de cerca de 5mb.
+        Os dados só são perdidos caso o usuário tenha que limpar o navegador.
+
+    SessionStorage
+
+        O SessionStorage é muito semelhante ao LocalStorage, o que muda aqui é que os dados armazenados dessa forma são limpos quando uma sessão termina, isso é, quando o browser ou a aba é fechado. Além disso, o SessionStorage possui mais espaço de armazenamento, com capacidade de 5-10MB.
